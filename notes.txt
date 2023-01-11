@@ -1,0 +1,7 @@
+
+- count words in each statement
+- put into list 
+- loop through patterns
+- compare with each word
+    - count appearences
+    - set max_num to row with most appearances
