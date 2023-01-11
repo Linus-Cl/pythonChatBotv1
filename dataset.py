@@ -1,3 +1,4 @@
+import split_sentence as sis
 
 data = {"data": [
     {"tag": "greeting",
@@ -23,3 +24,20 @@ data = {"data": [
 
 ]
 }
+
+words = []
+
+
+def update_words():
+    for dictonary in data['data']:
+        for patern in dictonary.get('paterns'):
+            split_patern = sis.split_sentence(patern)
+            for word in split_patern:
+                if word not in words:
+                    words.append(word)
+
+        for response in dictonary.get('responses'):
+            split_response = sis.split_sentence(response)
+            for word in split_response:
+                if word not in words:
+                    words.append(word)
